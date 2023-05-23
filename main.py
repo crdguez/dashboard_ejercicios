@@ -18,7 +18,7 @@ files = [f for f in os.listdir('.') if f.endswith('.pdf')]
 st.write(files)
 
 for f in files :
-#     st.header(f.split(".pdf")[0])
+    st.header(f.split(".pdf")[0])
     show_pdf(f)
     st.download_button(label="Descargar fichero", 
         data=open(f, "rb").read(),
