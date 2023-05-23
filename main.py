@@ -14,7 +14,7 @@ st.title('Ejercicios de Matemáticas')
 
 show_pdf('ecuaciones.pdf')
 
-st.download_button(label="Download PDF Tutorial", 
+st.download_button(label="Descargar fichero", 
         data=open("ecuaciones.pdf", "rb").read(),
         file_name="ecuaciones.pdf",
         mime='application/octet-stream')
