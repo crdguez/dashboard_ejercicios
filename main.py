@@ -13,13 +13,15 @@ def show_pdf(file_path):
 
 st.title('Ejercicios de Matemáticas')
 
-show_pdf('ecuaciones.pdf')
-
-st.download_button(label="Descargar fichero", 
-        data=open("ecuaciones.pdf", "rb").read(),
-        file_name="ecuaciones.pdf",
-        mime='application/octet-stream')
-
 # files = [f for f in os.listdir('.') if os.path.isfile(f) and f.endswith('.pdf')]
 files = [f for f in os.listdir('.') if f.endswith('.pdf')]
 st.write(files)
+
+for f in files :
+    show_pdf(f)
+    st.download_button(label="Descargar fichero", 
+        data=open(f, "rb").read(),
+        file_name=f,
+        mime='application/octet-stream')
+
+
