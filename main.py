@@ -20,4 +20,5 @@ st.download_button(label="Descargar fichero",
         file_name="ecuaciones.pdf",
         mime='application/octet-stream')
 
-st.write(os.listdir())
+files = [f for f in os.listdir('.') if os.path.isfile(f) and f.endswith('.pdf')]
+st.write(files)
