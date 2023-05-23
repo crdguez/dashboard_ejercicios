@@ -1,5 +1,6 @@
 import streamlit as st
 import base64
+import os
 
 def show_pdf(file_path):
     with open(file_path,"rb") as f:
@@ -18,3 +19,5 @@ st.download_button(label="Descargar fichero",
         data=open("ecuaciones.pdf", "rb").read(),
         file_name="ecuaciones.pdf",
         mime='application/octet-stream')
+
+st.write(os.listdir())
