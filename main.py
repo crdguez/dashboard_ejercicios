@@ -15,7 +15,7 @@ st.title('Ejercicios de Matemáticas')
 
 # files = [f for f in os.listdir('.') if os.path.isfile(f) and f.endswith('.pdf')]
 files = [f for f in os.listdir('.') if f.endswith('.pdf')]
-# st.write(files)
+st.write(files)
 
 for f in files :
     st.header(f.split(".pdf")[0])
