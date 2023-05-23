@@ -13,3 +13,7 @@ def show_pdf(file_path):
 st.title('Ejercicios de Matemáticas')
 
 show_pdf('ecuaciones.pdf')
+st.download_button(label="Download PDF Tutorial", 
+        data=PDFbyte,
+        file_name="ecuaciones.pdf",
+        mime='application/octet-stream')
