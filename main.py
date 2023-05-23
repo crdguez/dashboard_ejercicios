@@ -19,7 +19,7 @@ st.write(files)
 
 for f in files :
     st.header(f.split(".pdf")[0])
-    show_pdf(f)
+    show_pdf(r"./"+f)
     st.download_button(label="Descargar fichero", 
         data=open(f, "rb").read(),
         file_name=f,
