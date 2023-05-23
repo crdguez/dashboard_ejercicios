@@ -1,4 +1,5 @@
 import streamlit as st
+import base64
 
 def show_pdf(file_path):
     with open(file_path,"rb") as f:
