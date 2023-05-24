@@ -9,7 +9,7 @@ st.set_page_config(
 st.sidebar.title('Solucionario')
 
 # listdir=[filename for filename in os.listdir(file_to_search) if os.path.isdir(os.path.join(file_to_search,filename))]
-dirlist = [d for d in next(os.walk('.'))[1]]
+dirlist = [d for d in next(os.walk("2_Bachillerato_Ciencias"))[1]]
 st.sidebar.write(dirlist)
 
 def show_pdf(file_path):
