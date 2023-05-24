@@ -8,8 +8,9 @@ st.set_page_config(
     layout='wide')
 st.sidebar.title('Solucionario')
 
-listdir=[filename for filename in os.listdir(file_to_search) if os.path.isdir(os.path.join(file_to_search,filename))]
-st.sidebar.write("Hola")
+# listdir=[filename for filename in os.listdir(file_to_search) if os.path.isdir(os.path.join(file_to_search,filename))]
+dirlist = [d for d in next(os.walk(file_ro_search))[1]]
+st.sidebar.write(dirlist)
 
 def show_pdf(file_path):
     with open(file_path,"rb") as f:
