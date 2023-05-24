@@ -35,13 +35,14 @@ st.title('Ejercicios de Matemáticas')
 # files = [f for f in os.listdir('.') if f.endswith('.pdf')]
 # st.write(files)
 
-files = [f for f in os.listdir(curso+r'/'+bloque) if f.endswith('.pdf')]
+ruta=curso+r'/'+bloque
+files = [f for f in os.listdir(ruta) if f.endswith('.pdf')]
 st.write(files)
 
 for f in files :
     st.header(f.split(".pdf")[0])
-    show_pdf(f)
+    show_pdf(ruta+"/"+f)
     st.download_button(label="Descargar fichero",
-        data=open(f, "rb").read(),
+        data=open(ruta+"/"+f, "rb").read(),
         file_name=f,
         mime='application/octet-stream')
