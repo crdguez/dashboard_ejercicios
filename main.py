@@ -18,7 +18,7 @@ curso = st.sidebar.selectbox('Curso:',lc,0)
 
 # Filtro Bloque
 lb=[b for b in next(os.walk(curso))[1]]
-curso = st.sidebar.selectbox('Bloque:',lb,0)
+bloque = st.sidebar.selectbox('Bloque:',lb,0)
 
 def show_pdf(file_path):
     with open(file_path,"rb") as f:
@@ -32,7 +32,10 @@ def show_pdf(file_path):
 st.title('Ejercicios de Matemáticas')
 
 # files = [f for f in os.listdir('.') if os.path.isfile(f) and f.endswith('.pdf')]
-files = [f for f in os.listdir('.') if f.endswith('.pdf')]
+# files = [f for f in os.listdir('.') if f.endswith('.pdf')]
+# st.write(files)
+
+files = [f for f in os.listdir(curso+r'/'+bloque) if f.endswith('.pdf')]
 st.write(files)
 
 for f in files :
