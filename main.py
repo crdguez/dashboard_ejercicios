@@ -12,6 +12,14 @@ st.sidebar.title('Solucionario')
 dirlist = [d for d in next(os.walk("."))[1]][2:]
 st.sidebar.write(dirlist)
 
+# Filtro Curso
+lc=[d for d in next(os.walk("."))[1]][2:]
+curso = st.sidebar.selectbox('Curso:',lc,1)
+
+# Filtro Bloque
+lb=[b for b in next(os.walk(curso))[1]]
+curso = st.sidebar.selectbox('Bloque:',lb,1)
+
 def show_pdf(file_path):
     with open(file_path,"rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
