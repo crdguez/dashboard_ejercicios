@@ -49,5 +49,5 @@ st.header(fichero.split(".pdf")[0])
 show_pdf(ruta+"/"+fichero)
 st.download_button(label="Descargar fichero",
     data=open(ruta+"/"+fichero, "rb").read(),
-    file_name=f,
+    file_name=fichero,
     mime='application/octet-stream')
