@@ -33,7 +33,7 @@ ruta=curso+r'/'+bloque
 # Filtro fichero
 
 lf = [f for f in os.listdir(ruta) if f.endswith('.pdf')]
-fichero = st.sidebar.selectbox('Bloque:',lb,0)
+fichero = st.sidebar.selectbox('Tema:',lf,0)
 
 
 st.title('Ejercicios de Matemáticas')
