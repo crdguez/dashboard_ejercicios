@@ -13,8 +13,8 @@ dirlist = [d for d in next(os.walk("."))[1]][2:]
 st.sidebar.write(dirlist)
 
 # Filtro Curso
-lc=list([d for d in next(os.walk("."))[1]][2:])
-curso = st.sidebar.selectbox('Curso:',lc,1)
+lc=list([d for d in next(os.walk("."))[1]])
+curso = st.sidebar.selectbox('Curso:',lc,0)
 
 # # Filtro Bloque
 # lb=[b for b in next(os.walk(curso))[1]]
