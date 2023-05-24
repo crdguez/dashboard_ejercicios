@@ -16,9 +16,9 @@ st.sidebar.write(dirlist)
 lc=[d for d in next(os.walk("."))[1]][2:]
 curso = st.sidebar.selectbox('Curso:',lc,0)
 
-# # Filtro Bloque
-# lb=[b for b in next(os.walk(curso))[1]]
-# curso = st.sidebar.selectbox('Bloque:',lb,0)
+# Filtro Bloque
+lb=[b for b in next(os.walk(curso))[1]]
+curso = st.sidebar.selectbox('Bloque:',lb,0)
 
 def show_pdf(file_path):
     with open(file_path,"rb") as f:
